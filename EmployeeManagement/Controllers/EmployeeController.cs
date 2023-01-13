@@ -29,7 +29,11 @@ namespace EmployeeManagement.Controllers
            
         }
 
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="employee"></param>
+        /// <returns></returns>
         [HttpPost]
         public async Task<IActionResult> AddEmployee(EmployeeModel employee)
         {
@@ -47,7 +51,10 @@ namespace EmployeeManagement.Controllers
             }
                
         }
-
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetEmployeeDetails()
         {
@@ -79,6 +86,12 @@ namespace EmployeeManagement.Controllers
             }
            
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="employeeId"></param>
+        /// <param name="partitionKey"></param>
+        /// <returns></returns>
         [HttpGet]
         public async Task<IActionResult> GetEmployeeDetailsById(string employeeId,string partitionKey)
         {
@@ -96,6 +109,12 @@ namespace EmployeeManagement.Controllers
             }
 
         }
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="emp"></param>
+        /// <param name="partitionKey"></param>
+        /// <returns></returns>
         [HttpPut]
         public async Task<IActionResult> UpdateEmployee(EmployeeModel emp,string partitionKey)
         {
